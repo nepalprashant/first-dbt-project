@@ -1,0 +1,106 @@
+first:
+  outputs:
+    silver_crmuser_dev:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: dlyticauser
+      # password: ''  # required if method is ldap or kerberos
+      database: iceberg
+      host: dlytica-kube-vm.eastus.cloudapp.azure.com
+      port: 32553
+      schema: demo_silver_crmuser
+      http_scheme: http
+ 
+    silver_custom_dev:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: dlyticauser
+      # password: ''  # required if method is ldap or kerberos
+      database: iceberg
+      host: dlytica-kube-vm.eastus.cloudapp.azure.com
+      port: 32553
+      schema: demo_silver_custom
+      http_scheme: http
+ 
+    silver_tbaadm_dev:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: dlyticauser
+      # password: ''  # required if method is ldap or kerberos
+      database: iceberg
+      host: dlytica-kube-vm.eastus.cloudapp.azure.com
+      port: 32553
+      schema: demo_silver_tbaadm
+      http_scheme: http
+ 
+    silver_dbo_dev:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: dlyticauser
+      # password: [password]  # required if method is ldap or kerberos
+      database: iceberg
+      host: dlytica-kube-vm.eastus.cloudapp.azure.com
+      port: 32553
+      schema: demo_silver_dbo  
+ 
+    silver_bankxp_dev:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: dlyticauser
+      # password: [password]  # required if method is ldap or kerberos
+      database: iceberg
+      host: dlytica-kube-vm.eastus.cloudapp.azure.com
+      port: 32553
+      schema: demo_silver_bankxp
+ 
+    silver_mxp_dev:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: dlyticauser
+      # password: [password]  # required if method is ldap or kerberos
+      database: iceberg
+      host: dlytica-kube-vm.eastus.cloudapp.azure.com
+      port: 32553
+      schema: demo_silver_mxp  
+ 
+    silver_public_dev:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: dlyticauser
+      # password: [password]  # required if method is ldap or kerberos
+      database: iceberg
+      host: dlytica-kube-vm.eastus.cloudapp.azure.com
+      port: 32553
+      schema: demo_silver_public
+ 
+    silver_nic_offline_datasync_dev:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: dlyticauser
+      # password: [password]  # required if method is ldap or kerberos
+      database: iceberg
+      host: dlytica-kube-vm.eastus.cloudapp.azure.com
+      port: 32553
+      schema: demo_silver_nic_offline_datasync
+ 
+    silver_performance_dev:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: dlyticauser
+      # password: [password]  # required if method is ldap or kerberos
+      database: iceberg
+      host: dlytica-kube-vm.eastus.cloudapp.azure.com
+      port: 32553
+      schema: demo_silver_performance
+ 
+    gold_dev:
+      type: trino
+      method: none  # optional, one of {none | ldap | kerberos}
+      user: dlyticauser
+      # password: ''  # required if method is ldap or kerberos
+      database: iceberg
+      host: dlytica-kube-vm.eastus.cloudapp.azure.com
+      port: 32553
+      schema: gold
+ 
+  target: gold_dev
